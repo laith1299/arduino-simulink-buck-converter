@@ -1,0 +1,23 @@
+# MATLAB / Simulink Generated Artifacts
+slprj/
+*_ert_rtw/
+*.slxc
+*.asv
+*.m~
+*.autosave
+*.mat
+*.log
+*.mex*
+
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+*.swp
+*~
+
+# IDE and Editor Folders
+.vscode/
+.idea/
