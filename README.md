@@ -1,10 +1,9 @@
 # Hardware Implementation of a Closed-Loop PI Buck Converter using MATLAB Simulink & Arduino Uno
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![MATLAB: Simulink](https://img.shields.io/badge/MATLAB-Simulink%20Support%20Package-orange.svg)](https://www.mathworks.com/hardware-support/arduino-simulink.html)
 [![Target: Arduino Uno](https://img.shields.io/badge/Target-Arduino%20Uno%20(ATmega328P)-00979D.svg)](https://store.arduino.cc/products/arduino-uno-rev3)
 [![Control: Discrete PI](https://img.shields.io/badge/Control-Discrete--Time%20PI-purple.svg)](#)
-[![Field: Power Electronics](https://img.shields.io/badge/Field-Power%20Electronics%20%26%20RCP-red.svg)](#)
+[![Field: Power Electronics](https://img.shields.io/badge/Field-Power%20Electronics-blue.svg)](#)
 
 A practical engineering showcase demonstrating **Model-Based Design (MBD)** and **Rapid Control Prototyping (RCP)** for power electronics. This project implements a closed-loop **discrete-time PI voltage controller** for a physical DC-DC buck converter running directly on an **Arduino Uno** via **MATLAB / Simulink**, streaming live telemetry data in real time back to the desktop.
 
