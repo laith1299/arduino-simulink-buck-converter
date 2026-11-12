@@ -3,7 +3,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![MATLAB: Simulink](https://img.shields.io/badge/MATLAB-Simulink%20Support%20Package-orange.svg)](https://www.mathworks.com/hardware-support/arduino-simulink.html)
 [![Target: Arduino Uno](https://img.shields.io/badge/Target-Arduino%20Uno%20(ATmega328P)-00979D.svg)](https://store.arduino.cc/products/arduino-uno-rev3)
-[![PWM Frequency: 62.5 kHz](https://img.shields.io/badge/PWM%20Frequency-62.5%20kHz-blue.svg)](#)
 [![Control: Discrete PI](https://img.shields.io/badge/Control-Discrete--Time%20PI-purple.svg)](#)
 [![Field: Power Electronics](https://img.shields.io/badge/Field-Power%20Electronics%20%26%20RCP-red.svg)](#)
 
@@ -16,7 +15,7 @@ Designed & Implemented by **Laith Qawasmeh**
 
 ![Hardware Setup](docs/images/hardware-setup.jpg)
 
-*Figure 1: Complete experimental testbench showing the Arduino Uno running the Simulink-generated control algorithm, gate drive board, buck converter prototype, and live digital multimeters measuring $12.13\text{ V}$ input and $5.03\text{ V}$ regulated output.*
+*Figure 1: Complete experimental testbench showing the Arduino Uno running the Simulink-generated control algorithm, gate drive board, buck converter prototype, and live digital multimeters measuring 12.1V input and 5V regulated output.*
 
 ---
 
@@ -106,10 +105,10 @@ The physical prototype connects the digital control system to the power stage th
                                             | USB Serial Telemetry
                                             v
                   +---------------------------------------------------+
-                  |               Arduino Uno (ATmega328P)            |
+                  |                   Arduino Uno                     |
                   |  - Pin A1: Vref (Potentiometer)                   |
                   |  - Pin A4: Vo feedback (Voltage Divider)          |
-                  |  - Discrete PI Loop (Ts = 16 us)                  |
+                  |  - Discrete PI Loop                               |
                   |  - Pin 9:  62.5 kHz PWM Output                    |
                   +-------------------------+-------------------------+
                                             | 62.5 kHz PWM
@@ -117,15 +116,14 @@ The physical prototype connects the digital control system to the power stage th
                                  +---------------------+
                                  | Gate Driver Circuit |
                                  +----------+----------+
-                                            | Gate Drive Signal
+                                            | 
                                             v
-+------------------+             +---------------------+             +--------------------+
-| 12V DC Input     | ----------> | Power Buck Stage    | ----------> | Regulated 5V DC    |
-| (12.13V measured)|             | (Switch, L, C, D)   |             | (5.03V measured)   |
-+------------------+             +----------+----------+             +---------+----------+
++------------------+             +---------------------+             +--------------------------+
+| 12V DC Input     | ----------> | Power Buck Stage    | ----------> | Regulated 5V DC Output   |
++------------------+             +----------+----------+             +---------+----------------+
                                             |                                  |
-                                            | Feedback (Attenuated)            |
-                                            +----------------------------------+
+                                            | Feedback            |
+                                            +<<--------------------------------+
 ```
 
 ### Hardware Pin Mapping Summary
@@ -176,22 +174,6 @@ While production power supplies typically run on high-performance 32-bit DSPs (s
 
 ---
 
-## Repository Structure
-
-```
-arduino-simulink-buck-converter/
-├── docs/
-│   └── images/
-│       ├── hardware-setup.jpg               # Bench testbench photograph
-│       ├── simulink-model.jpg               # Simulink block diagram
-│       └── realtime-experimental-scope.jpg  # Live scope waveforms during load steps
-├── .gitignore                               # Clean exclusion of temporary/MATLAB artifacts
-├── arduino_PI_controller.slx                # Simulink model source file
-├── LICENSE                                  # MIT License
-└── README.md                                # Technical documentation & showcase
-```
-
----
 
 ## Author
 
@@ -203,4 +185,4 @@ arduino-simulink-buck-converter/
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE) — free for educational, personal, and commercial experimentation.
+This project is [MIT License](LICENSE)
